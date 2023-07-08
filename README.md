@@ -36,4 +36,4 @@ To set up the project locally and start working on it, follow the steps below:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/student-dating-website.git -->
+   https://github.com/sagarmandiya/Terrier-Connection.git -->
