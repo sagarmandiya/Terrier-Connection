@@ -1,0 +1,18 @@
+{%extends 'base_preregister.html'%} {% load static from static %} {%block page_title%}Join Dating App{%endblock%} {%block content%}
+
+<!--Index banner-->
+<section>
+    <div class="preregister-banner" style="background-image: url('{% static 'temp/preregister-banner.jpeg'%}')" class="jumbotron jumbotron-fluid">
+        <div class="standard-jumbotron-container container">
+            <!-- <h1 class="display-4">RaveUP</h1> -->
+            <h1 class="display-4">TerrierConnection</h1>
+            <!-- <p class="lead">Find meeting new pals the easy way with the world's best meeting site. Find that special someone.</p> -->
+            <p class="lead">A perfect way of making meaningful connections that last for a lifetime</p>
+            <p class="lead">
+                <a class="btn standard-button btn-lg preregister-button" href="{% url 'register' %}" role="button">JOIN NOW</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+{%endblock%}
