@@ -17,7 +17,7 @@ Checks if last message recieved by user is unread - used to check if a new messa
 has been recieved
 """
 @login_required
-@premium_required
+# @premium_required
 def new_message_check(request):
     conversation_id = request.GET.get('url_id', None)
     is_read = Messages.objects.filter(conversation=conversation_id, receiver=request.user, is_read=False).exists()
@@ -46,7 +46,7 @@ def read_messages(request):
 
 # Chat page, showing messages of a specific conversation
 @login_required
-@premium_required
+# @premium_required
 def chat(request, id):
     page_ref = "chat"
     conversation_ids = Conversations.objects.filter(participants=request.user)
@@ -116,7 +116,7 @@ def chat(request, id):
  
 # Chat home page, which displays all conversations but no messages
 @login_required  
-@premium_required 
+# @premium_required 
 def chat_home(request):
     conversation_ids = Conversations.objects.filter(participants=request.user)
 
@@ -198,7 +198,7 @@ def reject(request):
         
 # AJAX function to create a messages/conversation record(s)
 @login_required
-@premium_required
+# @premium_required
 def chat_ajax(request):
     # Get message recipient and message content
     receiver_id = request.POST.get('message_receiver')
@@ -285,7 +285,7 @@ def winks(request):
     
 # Views page to display recieved views
 @login_required
-@premium_required   
+# @premium_required   
 def views(request):
     
     # Query recieved winks and paginate results
@@ -334,7 +334,7 @@ def read_wink(request):
 
 # AJAX function to read all views currently on specific page
 @login_required
-@premium_required
+# @premium_required
 def read_view(request):
     page = request.GET.get('page', None)
     

@@ -18,7 +18,7 @@
         <!--Displays profile image or placeholder if image is not verified-->
         {% if image.is_verified == "APPROVED" or request.user.id == member.id %}
         <img class="profile-img" src="{{image.image.url}}"> {% else %}
-        <img class="profile-img" src="{% static 'temp/profile-placeholder.png' %}"> {% endif %} {% endfor %}
+        <img class="profile-img" src="{media/placeholder.jpg' %}"> {% endif %} {% endfor %}
     </div>
 </div>
 

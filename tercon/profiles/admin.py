@@ -12,7 +12,7 @@ def verify(modeladmin, request, queryset):
         else: 
             emailtuple += (('Your profile photo has been approved', 'Thank you for submitting your profile photos. The following image has been approved: "%s"> '% value.image.url, 'worlds.best.dating.app@gmail.com', [value.user.email]),)
                 
-    send_mass_mail(emailtuple)
+    # send_mass_mail(emailtuple)
         
 def reject(modeladmin, request, queryset):
     emailtuple = ()
@@ -23,7 +23,7 @@ def reject(modeladmin, request, queryset):
         else: 
             emailtuple = emailtuple + (('Your profile photo has been rejected', 'Thank you for submitting your profile photos. However, one of your profile photos do not follow our community guidelines and has been deleted', 'worlds.best.dating.app@gmail.com', [value.user.email]),)
      
-    send_mass_mail(emailtuple)
+    # send_mass_mail(emailtuple)
     
     if isinstance(queryset.first(), Profile):
         queryset.update(is_verified='NOT APPROVED')

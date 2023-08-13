@@ -19,13 +19,15 @@ def premium_required(function):
             current_profile = Profile.objects.get(user_id=request.user.id)
             current_profile.is_premium = False
             current_profile.save()
-            return redirect(reverse('subscribe'))
+            # return redirect(reverse('subscribe'))
+            return redirect(reverse('chat'))
         else:
             if request.accepts('application/json'):
                 data = {}
-                data['redirect'] = '/subscribe'
+                # data['redirect'] = '/subscribe'
+                data['redirect'] = '/chat/1'
                 return JsonResponse(data)
-            return redirect(reverse('subscribe'))
+            return redirect(reverse('chat'))
             
     return wrap
     
