@@ -24,10 +24,10 @@ The student dating website is built using the following technologies:
 
 - **Frontend**: HTML, CSS, JavaScript, React.js
 - **Backend**: Python, Django
-- **Database**: MongoDB
+- **Database**: SQLite
 - **Authentication**: JSON Web Tokens (JWT)
 - **Real-time Communication**: WebSockets
-- **Deployment**: Docker, AWS (Amazon Web Services)
+- **Deployment**: Docker, AWS (Amazon Web Services), Pythonanywhere
 
 <!-- ## Getting Started
 
