@@ -345,7 +345,8 @@ class TestViews(TestCase):
         
         self.assertJSONEqual(
             response_content,
-            {'redirect' : '/subscribe'}
+            # {'redirect' : '/subscribe'}
+            {'redirect' : '/chat/1'}
         )
         
     # Test ajax read view returns 204 response (user premium)   

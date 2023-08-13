@@ -133,7 +133,7 @@ def create_profile(request):
     Assistance from
     https://stackoverflow.com/questions/34006994/how-to-upload-multiple-images-to-a-blog-post-in-django
     """
-    ImageFormSet = modelformset_factory(ProfileImage, form=ProfileImageForm, extra=6, max_num=6, help_texts=None)
+    ImageFormSet = modelformset_factory(ProfileImage, form=ProfileImageForm, extra=3, max_num=6, help_texts=None)
     
     # If user has submitted profile form
     if request.method == "POST":
